@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
 
  // Простая базовая аутентификация
  const auth = req.headers['proxy-authorization'];
- if (!auth || auth !== 'Basic ' + Buffer.from('user:password').toString('base64')) {
+ if (!auth || auth !== 'Basic ' + Buffer.from('Kerimhan:Kerimhan').toString('base64')) {
   res.writeHead(407, { 'Proxy-Authenticate': 'Basic realm="Proxy"' });
   res.end('Auth required');
   return;
